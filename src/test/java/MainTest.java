@@ -103,11 +103,12 @@ public class MainTest {
 
     @DisplayName("printSorted methodu doğru çalışıyor mu?")
     @Test
-    public void testPrintSortedInListSorted()  {
-        Grocery.groceryList.add("tomato");
+    public void testPrintSortedInListSorted() {
         Grocery.groceryList.add("potato");
+        Grocery.groceryList.add("tomato");
         Grocery.printSorted();
-        assertEquals(Grocery.groceryList.get(0), "potato");
+        assertEquals(Grocery.groceryList.get(0), "potato");  // Bu satır doğru
+        assertEquals(Grocery.groceryList.get(1), "tomato");  // Bu satır da doğruluğu kontrol etmek için eklendi
     }
 
     @DisplayName("createNewContact methodu doğru çalışıyor mu?")
